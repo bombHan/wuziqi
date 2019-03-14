@@ -140,7 +140,22 @@ class DataSummryView extends Component {
                                                                 if (item2 === 2) {
                                                                     console.log("下棋", dataContext.currentColor);
                                                                     const nowColor = dataContext.currentColor === "white" ? 0 : 1;
-                                                                    let newValue = dataContext.value;
+                                                                    const lastArr = _.filter(dataContext.lastArr, (item) => {
+                                                                        return dataContext.value[item.index1][item.index2] !== 2
+                                                                    });
+                                                                    console.log(lastArr)
+                                                                    actions.update({
+                                                                        lastArr: _.concat(lastArr, {index1,index2,currentColor: dataContext.currentColor}),
+                                                                        lastStep: lastArr.length,
+                                                                    });
+                                                                    // const lastArr = dataContext.lastArr;
+                                                                    // console.log(lastArr)
+                                                                    // actions.update({
+                                                                    //     lastArr: _.concat(lastArr, {value: dataContext.value, currentColor: dataContext.currentColor}),
+                                                                    //     lastStep: lastArr.length,
+                                                                    // });
+
+                                                                    let newValue = _.concat(dataContext.value, []);
                                                                     newValue[index1][index2] = nowColor;
                                                                     let win = false;
                                                                     _.forEach(newValue, (it1, in1) => {
@@ -304,6 +319,53 @@ class DataSummryView extends Component {
                         }}
                     >
                         重新开始
+                    </Button>
+                    <Button
+                        disabled={dataContext.lastStep < 0 || dataContext.finished}
+                        type="normal"
+                        style={{
+                            margin: "0 0 20px 0",
+                            display: "block",
+                            background: "#ff4d4f",
+                            borderColor: "#ff4d4f"
+                        }}
+                        onClick={() => {
+                            let newValue = dataContext.value;
+                            const lastIndex1 = (dataContext.lastArr[dataContext.lastStep]).index1;
+                            const lastIndex2 = (dataContext.lastArr[dataContext.lastStep]).index2;
+                            newValue[lastIndex1][lastIndex2] = 2;
+                            // const lastArr =dataContext.lastArr;
+                            actions.update({
+                                value: newValue,
+                                lastStep: dataContext.lastStep - 1,
+                                currentColor: (dataContext.lastArr[dataContext.lastStep]).currentColor,
+                                // value: (lastArr[dataContext.lastStep]).value,
+                                // lastStep: dataContext.lastStep - 1,
+                                // currentColor: (lastArr[dataContext.lastStep]).currentColor,
+                            })
+                        }}
+                    >
+                        悔一步棋
+                    </Button>
+                    <Button
+                        disabled={dataContext.lastStep < 0 || dataContext.finished || dataContext.lastArr.length -1 === dataContext.lastStep}
+                        style={{
+                            margin: "0 0 20px 0",
+                            display: "block",
+                        }}
+                        onClick={() => {
+                            let newValue = dataContext.value;
+                            const lastIndex1 = (dataContext.lastArr[dataContext.lastStep + 1]).index1;
+                            const lastIndex2 = (dataContext.lastArr[dataContext.lastStep + 1]).index2;
+                            newValue[lastIndex1][lastIndex2] = (dataContext.lastArr[dataContext.lastStep + 1]).currentColor === "white" ? 0 : 1;
+                            actions.update({
+                                value: newValue,
+                                lastStep: dataContext.lastStep + 1,
+                                currentColor: (dataContext.lastArr[dataContext.lastStep + 1]).currentColor,
+                            })
+                        }}
+                    >
+                        撤销一步悔棋
                     </Button>
                 </div>
 

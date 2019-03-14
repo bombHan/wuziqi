@@ -11,8 +11,8 @@ export let initState = {
             return 2;
         })
     }),
-    lastIndex1: null,
-    lastIndex2: null,
+    lastStep: -1,
+    lastArr: [],
 };
 
 
