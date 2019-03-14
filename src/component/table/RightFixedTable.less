@@ -1,0 +1,91 @@
+@import "~antd/lib/table/style/index.less";
+
+@table-prefix-cls: nursecare-right-fixed-table;
+
+.@{table-prefix-cls} {
+    & {
+        font-size: 14px;
+        color: #333333;
+        flex: 1;
+    }
+
+    &-body {
+        overflow: scroll !important;
+    }
+
+    table {
+        table-layout: fixed;
+    }
+    &-thead > tr{
+        height:40px;
+    }
+    &-row {
+        height:40px;
+    }
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+    &-wrapper .ant-spin-nested-loading {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+    &-wrapper .ant-spin-nested-loading .ant-spin-container {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+    &-thead > tr > th,
+    &-tbody > tr > td {
+        padding: 4px 20px;
+        word-break: break-all;
+
+    }
+
+    &-tbody > tr > td > .hover-section {
+        opacity: 0;
+    }
+
+    &-fixed-right {
+        box-shadow: none;
+        background: rgba(0, 0, 0, 0);
+        table-layout: fixed;
+    }
+
+    &-fixed-right tr {
+        background: rgba(0, 0, 0, 0)
+    }
+
+    &-fixed-right &-fixed {
+        background: rgba(0, 0, 0, 0);
+        border: none;
+    }
+
+    &-fixed-right &-header {
+        visibility: hidden;
+    }
+    &-fixed {
+        table-layout: fixed;
+        border: none;
+    }
+    &-fixed-right &-thead th {
+        visibility: hidden;
+    }
+    &-fixed-right &-tbody tr td {
+        border-bottom: none;
+        box-sizing: content-box;
+    }
+
+    &-tbody > tr > td > .hover-section-show {
+        opacity: 100;
+    }
+
+    &-pagination {
+        flex: none;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 10px;
+    }
+}

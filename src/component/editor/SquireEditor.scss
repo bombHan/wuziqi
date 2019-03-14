@@ -1,0 +1,37 @@
+.editor {
+  ol{
+    margin-left:20px;
+    list-style: decimal;
+  }
+  ul{
+    margin-left:20px;
+    list-style:disc ;
+  }
+}
+.button1{
+  border:none;
+  background: none;
+  color:#222;
+  outline: none;
+  font-size: 18px;
+  font-weight: 600;
+  width:28px;
+  height:28px;
+  margin:0;
+  text-align: center;
+  cursor: pointer;
+
+}
+
+.button2{
+  border:none;
+  background: none;
+  color:#06c;
+  outline: none;
+  font-size: 18px;
+  font-weight: 600;
+  width:28px;
+  height: 28px;
+  cursor: pointer;
+  text-align: center;
+}

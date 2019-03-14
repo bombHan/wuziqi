@@ -1,0 +1,23 @@
+$icon-url: "ncicon";
+
+// 如果使用绝对路径, 生成的css url也是绝对路径url(/src/asset/font/iconfont)
+//$icon-url: "/src/asset/font/iconfont";
+
+@font-face {
+    font-family: "ncicon";
+    src: url("#{$icon-url}.woff") format("woff");
+
+    //src: url("#{$icon-url}.eot"); /* IE9*/
+    //src: /* IE6-IE8 */
+    //    url("#{$icon-url}.eot?#iefix") format("embedded-opentype"),
+    //        /* chrome、firefox */
+    //    url("#{$icon-url}.woff") format("woff"),
+    //        /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    //    url("#{$icon-url}.ttf") format("truetype"),
+    //        /* iOS 4.1- */
+    //    url("#{$icon-url}.svg#iconfont") format("svg");
+    font-style: normal;
+    font-weight: normal;
+    //
+    unicode-range: U+203B, U+25A0, U+25A1, U+25B2, U+25B3, U+25CB, U+25CF, U+2605, U+2606;
+}

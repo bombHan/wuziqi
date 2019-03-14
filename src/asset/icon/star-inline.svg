@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--切图中width:14px;height:14px, fontSize:14px-->
+<!--取 svg line-height:1;-->
+<!--则 height = line-height = (14/14) em-->
+
+
+<svg height="1em"
+     viewBox="0 0 14 13"
+     version="1.1"
+     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-603.000000, -377.000000)" fill="currentColor">
+            <polygon
+                    points="610 387.5 605.885503 389.663119 606.671302 385.081559 603.342604 381.836881 607.942752 381.168441 610 377 612.057248 381.168441 616.657396 381.836881 613.328698 385.081559 614.114497 389.663119"></polygon>
+        </g>
+    </g>
+</svg>

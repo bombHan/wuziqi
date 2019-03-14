@@ -1,0 +1,156 @@
+//--------------------------------------------------------------------
+//// import方案1.
+//@import "~antd/lib/button/style/index";
+// import方案2.
+@import "~antd/lib/style/themes/default";
+@import "~antd/lib/style/mixins/index";
+@import "~antd/lib/button/style/mixin";
+
+// NOTE :
+// 1. 这里选择import方案2., 因为方案1会生成多余的ant-btn style内容
+
+// NOTE:
+// 2. style 覆盖问题
+//
+// 这里没有重写 @btn-prefix-cls, 同时使用时使用自定义 type :
+// 如:
+// <Button type="normal">
+//   确定
+// </Button>
+//
+// 最终会生成
+// <button type="button" class="ant-btn ant-btn-normal" />
+// 形式的html
+// 当时ant-btn和ant-btn-normal都有color和background定义
+// 这就依赖于ant-btn和ant-btn-normal的顺序(后面的style会覆盖前面的)
+//
+// 实际使用过程中
+// ./src/index.js先将
+//    ./src/custom/style 优先载入
+//    其次是由于使用ant.design默认Button而载入的~antd/lib/button/style/index
+//
+// 由于ant-btn在ant-btn-normal后面出现, ant-btn-normal的重叠style(color和background)将被ant-btn覆盖
+//
+// 解决方案 :
+// 方案1
+// 删除 .babelrc 中
+//[
+//  "import",
+//  {
+//    "libraryName": "antd",
+//    "style": "css"
+//  }
+//]
+// 在 ./src/ddIndex.js 先将 antd/dist/antd.min.css 导入
+//
+// 方案2
+// 使用
+//.@{btn-prefix-cls} {
+//  &&-notice {
+//    .btn-notice
+//  }
+//
+//  &&-normal {
+//    .btn-normal
+//  }
+//}
+// 将生成
+//.ant-btn.ant-btn-normal {
+//  color: #FFFFFF;
+//  background-color: #03A9F4;
+//  border-color: #03A9F4;
+//}
+// 优先级比单个ant-btn或ant-btn-normal都高
+//
+// 这里使用方案1
+
+@btn-prefix-cls: ~"@{ant-prefix}-btn";
+
+.btn-normal() {
+    .button-variant-primary(#FFFFFF; #03A9F4);
+}
+
+.btn-notice() {
+    .button-variant-primary(#FFFFFF; #43BE5D);
+}
+
+.btn-warning() {
+    .button-variant-primary(#FFFFFF; #F85853);
+
+    .@{btn-prefix-cls}-group &:not(:first-child):not(:last-child) {
+        border-right-color: darken(#F85853, 10%);
+        border-left-color: darken(#F85853, 10%);
+
+        &:disabled {
+            border-color: @btn-default-border;
+        }
+    }
+
+    .@{btn-prefix-cls}-group &:first-child {
+        &:not(:last-child) {
+            border-right-color: darken(#F85853, 10%);
+            &[disabled] {
+                border-right-color: @btn-default-border;
+            }
+        }
+    }
+
+    .@{btn-prefix-cls}-group &:last-child:not(:first-child),
+    .@{btn-prefix-cls}-group & + & {
+        border-left-color: darken(#F85853, 10%);
+        &[disabled] {
+            border-left-color: @btn-default-border;
+        }
+    }
+}
+
+.btn-serious() {
+    .button-variant-primary(#FFFFFF; #ffcc33);
+}
+
+.btn-dark() {
+    .button-variant-primary(#FFFFFF; #78858E);
+}
+
+.btn-repair() {
+    .button-variant-primary(#FFFFFF; #ffcc33);
+}
+
+.@{btn-prefix-cls} {
+    &-normal {
+        .btn-normal
+    }
+
+    &-primary {
+        background-color: #03A9F4;
+        border-color: #03A9F4;
+    }
+
+    &-primary:focus,
+    &-primary:hover {
+        background-color: #67CBF8;
+        border-color: #67CBF8;
+    }
+
+    &-notice {
+        .btn-notice
+    }
+
+    &-warning {
+        .btn-warning
+    }
+
+    &-serious {
+        .btn-serious
+    }
+
+    &-dark {
+        .btn-dark
+    }
+    &-repair {
+        .btn-repair
+
+    }
+}
+
+//--------------------------------------------------------------------

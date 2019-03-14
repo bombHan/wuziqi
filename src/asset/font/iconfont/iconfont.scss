@@ -1,0 +1,43 @@
+$icon-url: "iconfont";
+
+// 1. 当前方案
+// webpack rule
+//{
+//    // 字体
+//    homepage: /\.(ttf|eot|svg|woff2?)(\?v=[a-z0-9=.]+)?$/i,
+//        // 包含
+//    include: [
+//        path.join(process.cwd(), "src/asset/font"),
+//    ],
+//    use: [
+//        "file-loader?name=[path][name].[ext]",
+//    ]
+//}
+
+// 结果:
+//@font-face {
+//    font-family: "anticon";
+//    src: url(asset/font/iconfont/iconfont.eot);
+//    /* IE9*/
+//    src: url(asset/font/iconfont/iconfont.eot?#iefix) format("embedded-opentype"), url(asset/font/iconfont/iconfont.woff) format("woff"), url(asset/font/iconfont/iconfont.ttf) format("truetype"), url(asset/font/iconfont/iconfont.svg#iconfont) format("svg"); }
+//
+
+// 2.
+// 如果使用绝对路径, 生成的css url也是绝对路径url(/src/asset/font/iconfont)
+//$icon-url: "/src/asset/font/iconfont";
+
+
+@font-face {
+    font-family: "anticon";
+    src: url("#{$icon-url}.eot"); /* IE9*/
+    src: /* IE6-IE8 */
+        url("#{$icon-url}.eot?#iefix") format("embedded-opentype"),
+            /* chrome、firefox */
+        url("#{$icon-url}.woff") format("woff"),
+            /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+        url("#{$icon-url}.ttf") format("truetype"),
+            /* iOS 4.1- */
+        url("#{$icon-url}.svg#iconfont") format("svg");
+}
+
+

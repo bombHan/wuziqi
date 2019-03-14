@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="21px" viewBox="0 0 20 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>否</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="03-图标" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="图标" transform="translate(-367.000000, -1023.000000)">
+            <g id="不是" transform="translate(367.000000, 1023.360814)">
+                <path d="M16.6666667,0 L3.33333333,0 C1.49333333,0 0,1.49139142 0,3.3289987 L0,16.6449935 C0,18.4826008 1.49333333,19.9739922 3.33333333,19.9739922 L16.6666667,19.9739922 C18.5066667,19.9739922 20,18.4826008 20,16.6449935 L20,3.3289987 C20,1.49139142 18.5066667,0 16.6666667,0 Z" id="Shape" fill="#CCCCCC" fill-rule="nonzero"></path>
+                <rect id="Rectangle-3" fill="#FFFFFF" fill-rule="evenodd" x="4" y="9" width="12" height="2" rx="1"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,42 @@
+
+@import "../../../style/base";
+
+
+
+
+
+
+.box {
+  width: auto;
+  margin: 10px;
+  position: relative;
+  top: 100px;
+}
+
+.border {
+  background-color: #fff;
+  border-radius: 4px;
+  background-clip: padding-box;
+  //box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  //border: 0;
+  border: 1px solid #EFF1F7;
+  padding: 16px;
+}
+
+.message-box {
+  @extend .box;
+  padding: 30px 40px;
+}
+
+@media screen and (min-width: $screen-sm-min) {
+
+  .box {
+    width: 640px;
+    margin: 0 auto;
+  }
+
+  .message-box {
+    width: 416px;
+    margin: 0 auto;
+  }
+}

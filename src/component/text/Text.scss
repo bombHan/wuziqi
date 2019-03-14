@@ -1,0 +1,10 @@
+$text-prefix-cls: numas-text;
+
+.#{$text-prefix-cls} {
+    display: inline-block;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+

@@ -1,0 +1,22 @@
+// 这里之所以把antd style 一次性载入, 是为了方便后面style覆盖
+//(NOTE: 这种方式会载入所有组件的样式，无法和按需加载插件 babel-plugin-import 的 style 属性一起使用.)
+// .babelrc
+// [
+//     "import",
+//     {
+//         "libraryName": "antd",
+//         "style": "css"
+//     }
+// ]
+
+
+//@import "~antd/dist/antd.less";
+//@icon-url: "/src/asset/font/iconfont"; // 不能这样写, 否则生成css的url也是绝对路径
+
+
+
+// 想办法传入相对路径
+// Modify Variables http://lesscss.org/usage/#using-less-in-the-browser-modify-variables
+// https://github.com/dvajs/dva/issues/576
+// '@icon-url': `"${path.relative( './~/antd/lib/style/*', './src/assets/iconfont/iconfont' )}"`
+

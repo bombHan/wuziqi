@@ -1,0 +1,22 @@
+//-------------------------------------------------------------
+@import "../spin/Spin";
+// NOTE : "../spin/Spin" 中会将 @primary-color: #fff;
+// 如果将本文件(spin.style)放入index.less中, 将会影响index.less的 @primary-color
+
+@spin-prefix-cls: numas-spin;
+
+.@{spin-prefix-cls} {
+
+  &-nested-loading {
+    display: flex;
+    flex : 1;
+  }
+  &-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+}
+
+//-------------------------------------------------------------

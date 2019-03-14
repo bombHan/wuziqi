@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--切图中width:12px;height:12px, fontSize:14px-->
+<!--取 svg line-height:1;-->
+<!--则 height = line-height = (12/14) em-->
+
+
+<svg width="0.857em"
+     height="12px"
+     viewBox="0 0 12 12"
+     version="1.1"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(-636.000000, -378.000000)" fill="currentColor">
+        <polygon points="642 378 648 390 636 390"></polygon>
+    </g>
+</svg>

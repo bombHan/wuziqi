@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>加</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="1.排班设置" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1.1.1全院班次设置-提示弹窗" transform="translate(-36.000000, -74.000000)" fill-rule="nonzero" fill="#FFFFFF">
+            <g id="Group-2" transform="translate(36.000000, 74.000000)">
+                <g id="加">
+                    <path d="M11.0838482,5 C11.5898323,5 11.9999836,5.37857159 12,5.84497951 L12,5.84497951 C12,6.31235333 11.5898487,6.69094001 11.0838482,6.69094001 L0.916151752,6.69094001 C0.410167653,6.69094001 1.63537201e-05,6.31236842 0,5.84497951 L0,5.84497951 C0,5.37858668 0.410151299,5 0.916151752,5 L11.0838482,5 Z" id="Shape"></path>
+                    <path d="M5,0.916559576 C5,0.410136208 5.37851122,0 5.84540209,0 L5.84540209,0 C6.31229296,0 6.69080418,0.410136208 6.69080418,0.916559576 L6.69080418,11.0843562 C6.69080418,11.5897984 6.31229296,12 5.84540209,12 L5.84540209,12 C5.37851122,12 5,11.5898638 5,11.0843562 L5,0.916559576 L5,0.916559576 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

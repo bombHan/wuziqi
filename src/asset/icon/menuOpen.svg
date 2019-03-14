@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="38px" viewBox="0 0 18 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>展开</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="2.基本" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="图标" transform="translate(-804.000000, -253.000000)">
+            <g id="展开" transform="translate(804.000000, 253.000000)">
+                <polygon id="Rectangle-13" fill="#EBF1F3" transform="translate(9.000000, 19.000000) scale(-1, 1) translate(-9.000000, -19.000000) " points="0 7 18 0 18 38 0 31"></polygon>
+                <path d="M6.38333352,17.5713423 L6.38333352,15.7142886 L16.8666668,15.7142886 L16.8666668,17.5713423 L6.38333352,17.5713423 L6.38333352,17.5713423 Z M6.38333352,21.2857114 L6.38333352,19.4285369 L16.8666668,19.4285369 L16.8666668,21.2857114 L6.38333352,21.2857114 L6.38333352,21.2857114 Z M4.71956657,25 L4.71956657,23.1427651 L17,23.1427651 L17,25 L4.71956657,25 L4.71956657,25 Z M4.71956657,13.8570537 L4.71956657,12 L17,12 L17,13.8570537 L4.71956657,13.8570537 L4.71956657,13.8570537 Z M2,18.3263321 L4.63175517,15.25 L4.63175517,21.4026143 L2,18.3263321 L2,18.3263321 Z" id="Shape-Copy" fill="#666666" fill-rule="nonzero" opacity="0.6" transform="translate(9.500000, 18.500000) scale(-1, 1) translate(-9.500000, -18.500000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

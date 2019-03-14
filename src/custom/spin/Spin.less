@@ -1,0 +1,64 @@
+@import "~antd/lib/spin/style/index";
+
+@spin-prefix-cls: lianfan-spin;
+@primary-color: #fff; // &-dot : color
+
+.@{spin-prefix-cls} {
+
+  &-nested-loading {
+    > div > .@{spin-prefix-cls} {
+      // 方案 1
+      top: 50%;
+      left: 50%;
+      width: 50px;
+      height: 50px;
+      margin: -25px;
+
+      // background-color: rgba(58, 58, 58, .9);  // 58 / 250 = 0.232
+      // background: (lighten(#000, 50%)); ==> rgb(128, 128, 128)
+      background-color: rgba(128, 128, 128, 0.9);
+      border: 0;
+      border-radius: 4px;
+      background-clip: padding-box;
+    }
+  }
+
+  // 方案 2
+  //&-nested-loading & {
+  //  &:before {
+  //    content: '';
+  //    position: absolute;
+  //    top: 50%;
+  //    left: 50%;
+  //    width: 50px;
+  //    height: 50px;
+  //    margin: -25px;
+  //
+  //    background-color: rgba(128, 128, 128, 0.9);
+  //    border: 0;
+  //    border-radius: 6px;
+  //    background-clip: padding-box;
+  //  }
+  //}
+
+  // 方案 3
+  //background: #000;
+  //opacity: 0.5;
+
+  &-blur {
+    opacity: initial;
+    -webkit-filter: initial;
+    filter: initial;
+
+    // remove :after
+    // http://stackoverflow.com/questions/3012716/css-how-to-remove-pseudo-elements-after-before
+
+    // 注意 :after有背景色
+    //background: #fff;
+    //opacity: 0.2;
+    // 清除背景色
+    //&:after {
+    //  content: none;
+    //}
+  }
+}

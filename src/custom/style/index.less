@@ -1,0 +1,256 @@
+@import "./_base";
+@import "~antd/lib/style/themes/default";
+
+@project-prefix: numas;
+
+body {
+    font-family: ncicon, @font-family;
+    font-size: 14px;
+}
+
+.ant-input {
+    font-family: ncicon, @font-family;
+}
+
+//-------------------------------------------------------------
+@import "~antd/lib/modal/style/index";
+@dialog-prefix-cls: ~"@{project-prefix}-modal";
+
+.@{dialog-prefix-cls} {
+    font-family: ncicon, @font-family;
+
+    top: @numas-modal-top;
+    padding-bottom: @numas-modal-padding-bottom;
+    max-width: 100%;
+    max-height: calc(~"100% - " @numas-modal-top); // https://stackoverflow.com/questions/17904088/disable-less-css-overwriting-calc
+    display: flex;
+
+    // TODO
+    // margin: 10px;
+
+    &-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    &-header {
+        flex: none;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #DFE2E4;
+        height: 48px;
+        border: 1px solid #CCCCCC;
+    }
+    &-title {
+        font-size: 20px;
+        color: #333333;
+        font-weight: bold;
+    }
+
+    &-body {
+        flex: 1;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+
+        padding: 0;
+    }
+
+    &-footer {
+        flex: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .@{dialog-prefix-cls} {
+        margin: 0;
+    }
+}
+
+//-------------------------------------------------------------
+@import "~antd/lib/tabs/style/index";
+@tab-prefix-cls: ~"@{project-prefix}-tabs";
+
+.@{tab-prefix-cls} {
+    display: flex;
+    flex-direction: column;
+
+    &-bar {
+        margin-bottom: 15px;
+        flex: none;
+    }
+
+    &-content {
+        flex: 1;
+    }
+}
+
+//-------------------------------------------------------------
+
+@import "~antd/lib/button/style/index";
+@btn-prefix-cls: ~"@{project-prefix}-image-button";
+
+.@{btn-prefix-cls} {
+
+    background: transparent;
+    border: none;
+    padding: 0 0 0 0;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        background: transparent;
+    }
+}
+
+//-------------------------------------------------------------
+
+@import "~antd/lib/form/style/index";
+@form-prefix-cls: ~"@{project-prefix}-form";
+
+.@{form-prefix-cls}-item {
+    &-label {
+        label {
+            font-size: 14px;
+            color: #333333;
+        }
+    }
+}
+
+//-------------------------------------------------------------
+
+@import "~antd/lib/table/style/index";
+@table-prefix-cls: ~"@{project-prefix}-table";
+
+.@{table-prefix-cls} {
+
+    &-thead > tr > th {
+        background: #F6FAFF;
+        text-align: center;
+        font-weight: normal;
+        font-size: 14px;
+        color: #666666;
+    }
+    &-row {
+        text-align: center;
+        font-size: 14px;
+        color: #333333;
+    }
+}
+
+//-------------------------------------------------------------
+
+@import "~antd/lib/popover/style/index";
+@popover-prefix-cls: ~"@{project-prefix}-popover";
+
+.@{popover-prefix-cls} {
+    &-inner-content {
+        padding: 0;
+    }
+}
+
+//-------------------------------------------------------------
+
+@import "~antd/lib/checkbox/style/mixin";
+
+@checkbox-prefix-cls: ~"@{project-prefix}-checkbox";
+.antCheckboxFn(@checkbox-prefix-cls);
+
+.@{checkbox-prefix-cls}-wrapper + span,
+.@{checkbox-prefix-cls} + span {
+    padding-right: 0;
+}
+
+//-------------------------------------------------------------
+
+@import "~antd/lib/dropdown/style/index";
+@dropdown-prefix-cls: ~"@{project-prefix}-dropdown";
+
+.@{dropdown-prefix-cls} {
+
+    &-menu {
+        &-item,
+        &-submenu-title {
+            font-size: 14px;
+            color: #333333;
+
+            &-disabled {
+                color: @disabled-color;
+            }
+        }
+    }
+}
+
+//-------------------------------------------------------------
+
+@import "~antd/lib/tree-select/style/index";
+@select-prefix-cls: ~"@{project-prefix}-select";
+@select-tree-prefix-cls: ~"@{project-prefix}-select-tree";
+
+.antCheckboxFn(@checkbox-prefix-cls: ~"@{project-prefix}-select-tree-checkbox");
+
+.@{select-tree-prefix-cls} {
+    padding: 4px;
+
+    li {
+        ul {
+            margin: 0;
+            padding: 0 0 0 5px;
+        }
+        > span {
+            &.@{select-tree-prefix-cls}-switcher {
+                width: 15px;
+            }
+        }
+    }
+}
+
+@import "~antd/lib/menu/style/index";
+@menu-prefix-cls: ~"@{project-prefix}-menu";
+
+.@{menu-prefix-cls} {
+    &-inline {
+        .@{menu-prefix-cls}-item,
+        .@{menu-prefix-cls}-submenu-title {
+            width: auto;
+
+        }
+    }
+    &-item:hover{
+        color: #000;
+    }
+    .@{menu-prefix-cls}-item,
+    .@{menu-prefix-cls}-submenu-title {
+        padding: 4px 16px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        height: 48px;
+    }
+    .@{menu-prefix-cls}-item:not(:last-child) {
+        margin-bottom: 0px;
+    }
+    &:not(&-horizontal) &-item-selected {
+        background-color: #fff;
+        color: #000;
+    }
+    .@{menu-prefix-cls}-item:not(:last-child) {
+        margin-bottom: 0px;
+    }
+    .@{menu-prefix-cls}-item {
+        &:after {
+            border-right: none;
+            }
+    }
+    &-inline{
+        border-right: none;
+    }
+     &-item-active {
+         background-color: #e5e5e5;
+    }
+}
+

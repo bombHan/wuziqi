@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--切图中width:14px;height:14px, fontSize:14px-->
+<!--取 svg line-height:1;-->
+<!--则 height = line-height = (14/14) em-->
+
+
+<svg height="1em"
+     viewBox="0 0 12 12"
+     version="1.1"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g transform="translate(-733.000000, -378.000000)" fill="currentColor">
+        <text>
+            <tspan x="731" y="388.494141">※</tspan>
+        </text>
+    </g>
+</svg>
+

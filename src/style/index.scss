@@ -1,0 +1,80 @@
+@import "./_base";
+
+//-------------------------------------------------------------------------
+// scrollbar
+
+//$scrollbar-background: #D8D8D8;
+//
+//::-webkit-scrollbar {
+//  width: 8px;
+//  height: 8px;
+//}
+//
+//::-webkit-scrollbar-thumb {
+//  background: $scrollbar-background;
+//  border-radius: 4px;
+//
+//  &:hover {
+//    background-color: darken($scrollbar-background, 10%);
+//  }
+//
+//  &:active {
+//    background-color: darken($scrollbar-background, 30%);
+//  }
+//}
+
+
+$scrollbar-background: #C1C1C1;
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $scrollbar-background;
+    border-radius: 4px;
+
+    &:hover {
+        background-color: darken($scrollbar-background, 15%);
+    }
+
+    &:active {
+        background-color: darken($scrollbar-background, 35%);  // #7D7D7D
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+// numas1 滚动条样式
+//::-webkit-scrollbar {
+//  width: 9px;
+//  height: 9px;
+//  background: rgba(240, 240, 240, 1);
+//}
+//
+//::-webkit-scrollbar-thumb {
+//  background-color: #CCCCCC;
+//  outline-offset: -2px;
+//  outline: 2px solid white;
+//  border-radius: 4px;
+//  border: 2px solid white;
+//}
+//
+//::-webkit-scrollbar-thumb:hover {
+//  background-color: #999999;
+//  border-radius: 4px;
+//}
+//
+//::-webkit-scrollbar-track-piece {
+//  background-color: transparent;
+//  border-radius: 0;
+//}
