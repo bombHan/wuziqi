@@ -3,7 +3,7 @@
 -----------
 终极五子棋对局
 
-
+打包后实现效果：[link](https://runuowbd123.github.io/homework/wuziqi/index.html#/wuziqi)
 --------
 
 

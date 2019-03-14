@@ -103,7 +103,7 @@ class DataSummryView extends Component {
                                                                         }
                                                                         // 向右下
                                                                         if (in1 < 11 && in2 < 11) {
-                                                                            if (it2 === newValue[in1 - 1][in2 - 1] && it2 === newValue[in1 -2][in2 - 2] && it2 === newValue[in1 -3][in2 - 3] && it2 === newValue[in1 -4][in2 - 4]) {
+                                                                            if (it2 === newValue[in1 + 1][in2 + 1] && it2 === newValue[in1 + 2][in2 + 2] && it2 === newValue[in1 + 3][in2 + 3] && it2 === newValue[in1 + 4][in2 + 4]) {
                                                                                 win = true;
                                                                             }
                                                                         }
@@ -217,7 +217,7 @@ class DataSummryView extends Component {
                             fontSize: "16px",
                         }}
                     >
-                        游戏获胜方: {dataContext.finished ? (dataContext.currentColor === "white" ? "黑色玩家获胜" : "白色玩家获胜") : "对局中"}
+                        游戏获胜方: {dataContext.finished ? (dataContext.currentColor === "white" ? "黑色玩家获胜" : "白色玩家获胜") : "对局中..."}
                     </div>
                     <Button
                         style={{
