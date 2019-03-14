@@ -11,6 +11,8 @@ export let initState = {
             return 2;
         })
     }),
+    lastIndex1: null,
+    lastIndex2: null,
 };
 
 
