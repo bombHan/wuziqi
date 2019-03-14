@@ -37,15 +37,15 @@ class DataSummryView extends Component {
                 <div
                     style={{
                         flex: 1,
-                        marginTop: "0.8rem"
+                        marginTop: "0.8rem" // 40px
                     }}
                 >
                     <div
                         style={{
-                            fontSize: "18px",
+                            fontSize: "0.36rem",
                             fontWeight: "bold",
                             textAlign: "center",
-                            marginBottom: "20px"
+                            marginBottom: "0.4rem"
                         }}
                     >
                         终极五子棋火火
@@ -54,7 +54,7 @@ class DataSummryView extends Component {
                         style={{
                             position: "relative",
                             margin: "0 auto",
-                            width: "650px"
+                            width: "10rem", //650px
                         }}
                     >
                         {/*棋盘*/}
@@ -62,7 +62,7 @@ class DataSummryView extends Component {
                             style={{
                                 position: "absolute",
                                 top: "0px",
-                                left: "50px",
+                                left: "1rem",
                                 zIndex: 1,
                             }}
                         >
@@ -82,8 +82,8 @@ class DataSummryView extends Component {
                                                         return (
                                                             <div
                                                                 style={{
-                                                                    height: "40px",
-                                                                    width: "40px",
+                                                                    height: "0.8rem", // 40px
+                                                                    width: "0.8rem",
                                                                     borderRight: "1px solid #000",
                                                                     borderBottom: "1px solid #000",
                                                                     borderTop: index1 === 1 ? "1px solid #000" : null,
@@ -108,8 +108,8 @@ class DataSummryView extends Component {
                         <div
                             style={{
                                 position: "absolute",
-                                top: "-20px",
-                                left: "30px",
+                                top: "-0.4rem",
+                                left: "0.6rem",
                                 zIndex: 999,
                             }}
                         >
@@ -126,8 +126,8 @@ class DataSummryView extends Component {
                                                 return (
                                                     <div
                                                         style={{
-                                                            height: "40px",
-                                                            width: "40px",
+                                                            height: "0.8rem",
+                                                            width: "0.8rem",
                                                             // borderRight: "1px solid #000",
                                                             // borderBottom: "1px solid #000",
                                                             // borderTop: index1 === 0 ? "1px solid #000" : null,
@@ -215,6 +215,8 @@ class DataSummryView extends Component {
                                                                                         })
                                                                                     }),
                                                                                     finished: false,
+                                                                                    lastStep: -1,
+                                                                                    lastArr: [],
                                                                                 })
                                                                             },
                                                                             onCancel() {
@@ -257,6 +259,8 @@ class DataSummryView extends Component {
                                                                                 })
                                                                             }),
                                                                             finished: false,
+                                                                            lastStep: -1,
+                                                                            lastArr: [],
                                                                         })
                                                                     },
                                                                     onCancel() {
@@ -268,11 +272,11 @@ class DataSummryView extends Component {
                                                         <div
                                                             style={{
                                                                 display: item2 === 2 ? "none" : "block",
-                                                                height: "30px",
-                                                                width: "30px",
-                                                                borderRadius: "15px",
+                                                                height: "0.6rem", // 30px
+                                                                width: "0.6rem",
+                                                                borderRadius: "0.3rem",
                                                                 background: item2 === 0 ? "#e2e7ed" : "black",
-                                                                margin: "5px auto",
+                                                                margin: "0.1rem auto",
                                                             }}
                                                         ></div>
                                                     </div>
@@ -290,20 +294,20 @@ class DataSummryView extends Component {
                 </div>
                 <div
                     style={{
-                        width: "300px",
-                        padding: "40px"
+                        width: "6rem", // 300px
+                        padding: "0.8rem"
                     }}
                 >
                     <div
                         style={{
-                            fontSize: "16px",
+                            fontSize: "0.32rem", // 16px
                         }}
                     >
                         游戏获胜方: {dataContext.finished ? (dataContext.currentColor === "white" ? "黑色玩家获胜" : "白色玩家获胜") : "对局中..."}
                     </div>
                     <Button
                         style={{
-                            margin: "20px 0"
+                            margin: "20px 0",
                         }}
                         type="normal"
                         onClick={() => {
@@ -315,6 +319,8 @@ class DataSummryView extends Component {
                                     })
                                 }),
                                 finished: false,
+                                lastStep: -1,
+                                lastArr: [],
                             });
                         }}
                     >
@@ -327,7 +333,7 @@ class DataSummryView extends Component {
                             margin: "0 0 20px 0",
                             display: "block",
                             background: "#ff4d4f",
-                            borderColor: "#ff4d4f"
+                            borderColor: "#ff4d4f",
                         }}
                         onClick={() => {
                             let newValue = dataContext.value;
