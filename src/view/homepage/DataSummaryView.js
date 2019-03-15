@@ -14,11 +14,15 @@ import DataSummryActions from "../../action/homepage/DataSummaryActions";
 class DataSummryView extends Component {
     constructor(...props) {
         super(...props);
-
+        this.state={
+            tt: 0,
+            time: 0,
+        }
 
     }
     componentWillMount() {
         const {dataContext, actions} = this.props;
+        console.log(window.location, window.location.origin)
     }
 
 
@@ -202,9 +206,15 @@ class DataSummryView extends Component {
                                                                             okType: "normal",
                                                                             okPlacement: "left",
                                                                             content: (
-                                                                                <div style={{textAlign: "center"}}>{nowColor === 0 ? "白色玩家" : "黑色玩家"}获胜</div>
+                                                                                <div style={{textAlign: "center"}}>
+                                                                                    {nowColor === 0 ? "白色玩家" : "黑色玩家"}获胜
+                                                                                    <div>
+                                                                                        并且获取抽奖机会!!!
+                                                                                    </div>
+                                                                                </div>
                                                                             ),
                                                                             okText: "重新开始",
+                                                                            cancelText: "去抽奖",
                                                                             onOk: () => {
                                                                                 actions.update({
                                                                                     currentColor: "white",
@@ -219,6 +229,7 @@ class DataSummryView extends Component {
                                                                                 })
                                                                             },
                                                                             onCancel() {
+                                                                                window.open(`${window.location.origin}/#/homepage`, "_blank");
                                                                             },
                                                                         });
                                                                     } else {
@@ -380,6 +391,7 @@ class DataSummryView extends Component {
                     >
                         去抽个奖
                     </Button>
+
                 </div>
 
             </div>
