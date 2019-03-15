@@ -9,7 +9,7 @@ import DataSummaryView from "bundle-loader?lazy!../../homepage/DataSummaryView";
 const menu = [
     {
         key: "homepage",
-        name: "首页",
+        name: "抽奖",
         component: HomePageView,
         // children: [{
         //     key: "hospitaldetail",

@@ -373,6 +373,13 @@ class DataSummryView extends Component {
                     >
                         撤销一步悔棋
                     </Button>
+                    <Button
+                        onClick={() => {
+                            this.props.history.push({pathname: "homepage"})
+                        }}
+                    >
+                        去抽个奖
+                    </Button>
                 </div>
 
             </div>
