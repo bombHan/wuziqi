@@ -35,6 +35,20 @@ class HomePageView extends Component {
            <div>
                <div
                    style={{
+                       margin: "0 auto",
+                       width: "102px"
+                   }}
+               >
+                   <Button
+                       onClick={() => {
+                           this.props.history.push({pathname: "wuziqi"})
+                       }}
+                   >
+                       去下五子棋
+                   </Button>
+               </div>
+               <div
+                   style={{
                        display: "flex",
                        flexWrap: "wrap",
                        height: "200px",
@@ -237,20 +251,6 @@ class HomePageView extends Component {
                    >
                        现金5W
                    </div>
-               </div>
-               <div
-                   style={{
-                       margin: "0 auto",
-                       width: "102px"
-                   }}
-               >
-                   <Button
-                       onClick={() => {
-                           this.props.history.push({pathname: "wuziqi"})
-                       }}
-                   >
-                       去下五子棋
-                   </Button>
                </div>
            </div>
         );
