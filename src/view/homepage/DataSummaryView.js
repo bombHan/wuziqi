@@ -31,13 +31,12 @@ class DataSummryView extends Component {
                     width: "100%",
                     height: "100%",
                     display: "flex",
+                    overflow: "auto"
                 }}
-                disabled={dataContext.finished}
             >
                 <div
                     style={{
-                        flex: 1,
-                        marginTop: "0.8rem" // 40px
+                        marginTop: "0.8rem" , // 40px
                     }}
                 >
                     <div
@@ -54,7 +53,7 @@ class DataSummryView extends Component {
                         style={{
                             position: "relative",
                             margin: "0 auto",
-                            width: "10rem", //650px
+                            width: "12rem",
                         }}
                     >
                         {/*棋盘*/}
@@ -295,7 +294,8 @@ class DataSummryView extends Component {
                 <div
                     style={{
                         width: "6rem", // 300px
-                        padding: "0.8rem"
+                        padding: "0.8rem",
+                        flex: "none"
                     }}
                 >
                     <div
