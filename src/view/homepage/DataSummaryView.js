@@ -367,7 +367,7 @@ class DataSummryView extends Component {
                             actions.update({
                                 value: newValue,
                                 lastStep: dataContext.lastStep + 1,
-                                currentColor: (dataContext.lastArr[dataContext.lastStep + 1]).currentColor,
+                                currentColor: (dataContext.lastArr[dataContext.lastStep + 1]).currentColor === "white" ? "black" : "white",
                             })
                         }}
                     >
