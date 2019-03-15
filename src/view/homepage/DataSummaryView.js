@@ -229,7 +229,7 @@ class DataSummryView extends Component {
                                                                                 })
                                                                             },
                                                                             onCancel() {
-                                                                                window.open(`${window.location.origin}/#/homepage`, "_blank");
+                                                                                window.open(`https://runuowbd123.github.io/homework/wuziqi/index.html#/homepage`, "_blank");
                                                                             },
                                                                         });
                                                                     } else {
