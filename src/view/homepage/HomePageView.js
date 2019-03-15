@@ -35,7 +35,7 @@ class HomePageView extends Component {
            <div>
                <div
                    style={{
-                       margin: "0 auto",
+                       margin: "20px auto 0",
                        width: "102px"
                    }}
                >
